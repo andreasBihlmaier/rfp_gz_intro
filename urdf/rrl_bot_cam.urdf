@@ -255,9 +255,10 @@
 
   <gazebo>
     <plugin
-      filename="ignition-gazebo-sensors-system"
-      name="ignition::gazebo::systems::Sensors">
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
     </plugin>
+
   </gazebo>
   <!-- Add camera END -->
 </robot>

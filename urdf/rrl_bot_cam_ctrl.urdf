@@ -255,8 +255,8 @@
 
   <gazebo>
     <plugin
-      filename="ignition-gazebo-sensors-system"
-      name="ignition::gazebo::systems::Sensors">
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
     </plugin>
   </gazebo>
   <!-- Add camera END -->
@@ -264,7 +264,7 @@
   <!-- Add ros2_control START -->
   <ros2_control name="joint1_controller" type="system">
     <hardware>
-      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
     </hardware>
     <joint name="joint1">
       <state_interface name="position" />
@@ -274,7 +274,7 @@
   </ros2_control>
   <ros2_control name="joint2_controller" type="system">
     <hardware>
-      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
     </hardware>
     <joint name="joint2">
       <state_interface name="position" />
@@ -284,7 +284,7 @@
   </ros2_control>
   <ros2_control name="joint3_controller" type="system">
     <hardware>
-      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
     </hardware>
     <joint name="joint3">
       <state_interface name="position" />
@@ -295,8 +295,8 @@
 
   <gazebo>
     <plugin
-      filename="ign_ros2_control-system"
-      name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      filename="gz_ros2_control-system"
+      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
       <!-- Must launch gazebo in the right directory relative to hardcoded path.
            No good solution to parameters path without using xacro. -->
       <parameters>src/rfp_gz_intro/config/rrl_bot_controller.yaml</parameters>

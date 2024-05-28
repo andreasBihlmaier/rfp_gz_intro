@@ -9,7 +9,7 @@
 
   <depend>rclpy</depend>
   <depend>ros2launch</depend>
-  <depend>ign_ros2_control</depend>
+  <depend>gz_ros2_control</depend>
   <depend>ros2_control</depend>
   <depend>ros2_controllers</depend>
   <depend>ros_gz_sim</depend>
